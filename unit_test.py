@@ -2,17 +2,17 @@ import tictactoe
 import unittest
 
 class TestBoardMethods(unittest.TestCase):
-    def test_get_user_input(self):
+    def test_determine_winner(self):
         user_win_board_one = ['x', 'x', 'x', 'o', 'x', 'o', 'o', 'o', 'x']
         user_win_board_two = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'o']
-        user_win_board_three = ['o', 'x', 'o', 'x', 'o', 'x', 'o', ' ', 'x']
+        user_win_board_three = ['x', 'o', 'x', 'o', 'x', 'o', 'x', ' ', 'o']
 
-        draw_board_one = ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x', 'o']
+        draw_board_one = ['o', 'x', 'o', 'x', 'o', 'x', ' ', ' ', ' ']
         draw_board_two = ['o', 'x', 'x', 'x', 'o', 'o', 'x', 'o', 'x']
         draw_board_three = ['x', 'o', 'x', 'x', 'o', 'x', 'o', 'x', 'o']
 
         comp_win_board_one = ['o', 'o', 'o', 'o', 'x', 'o', 'o', 'o', 'x']
-        comp_win_board_two = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'o']
+        comp_win_board_two = ['o', 'x', 'o', 'x', 'o', 'x', 'o', 'x', 'x']
         comp_win_board_three = ['o', 'x', 'o', 'x', 'o', 'x', 'o', ' ', 'x']
 
         self.assertEqual(tictactoe.determine_winner(user_win_board_one), 'u')
